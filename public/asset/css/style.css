@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+}
+body {
+    background-color: #435165;
+}
+.login {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+}
+.login h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+.login form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+.login form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+.login form input[type="password"], .login form input[type="text"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.login form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+   margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.login form input[type="submit"]:hover {
+  background-color: #2868c7;
+    transition: background-color 0.2s;
+}
+
+/* ini batas */
+
+.navtop {
+	background-color: #2f3947;
+	height: 60px;
+	width: 100%;
+	border: 0;
+}
+.navtop div {
+	display: flex;
+	margin: 0 auto;
+	width: 95%;
+	height: 100%;
+}
+.navtop div h1, .navtop div a {
+	display: inline-flex;
+	align-items: center;
+}
+.navtop div h1 {
+	flex: 1;
+	font-size: 24px;
+	padding: 0;
+	color: #eaebed;
+	font-weight: normal;
+}
+.navtop div a {
+    padding: 0px 20px 0px 10px;
+    text-decoration: none;
+    color: #c1c4c8;
+    font-weight: bold;
+}
+.navtop div a i {
+	padding: 2px 8px 0 0;
+}
+.navtop div a:hover {
+	color: #eaebed;
+}
+body.loggedin {
+	background-color: #f3f4f7;
+}
+body.content_menu1 {
+	background-color: #f3f4f7;
+}
+/* css profile page */
+.content {
+	flex: auto;
+	width: 100%;
+	margin: 0 auto;
+}
+.content h2 {
+	margin: 0;
+	padding: 25px 0 25px 15px;
+	font-size: 22px;
+	border-bottom: 1px solid #e0e0e3;
+	color: #4a536e;
+}
+.content p {
+	margin: 0;
+	padding: 15px 0 15px 15px;
+	font-size: 15px;
+	border-bottom: 1px solid #e0e0e3;
+	color: #4a536e;
+}
+.content_stream1 {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	width: 100%;
+	margin: 0 auto;
+	background-color: #ffffff;
+}
+.content_stream1 table {
+	width: 100%;
+}
+.content_stream1 table th {
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 10px 25px;
+	background-color: #fff;
+}
+
+/* bagan bagian creditas */
+.profile {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 25px;
+	background-color: #fff;
+}
+.profile table td, .profile table td {
+	padding: 5px;
+}
+.profile table td:first-child, .profile table td:first-child {
+	font-weight: bold;
+	color: #4a536e;
+	padding-right: 15px;
+}
+/* css your account below */
+.profile p {
+	padding: 5px;
+	margin: 0 0 10px 0;
+}
+/* css table your account below */
+.profile table {
+	width: 100%;
+	border: 50px color rgb(40, 104, 199);
+	padding: 1px;
+}
+/* th {
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 10px 25px;
+	background-color: #fff;
+} */
+
+/* ini adalah batas css logo */
