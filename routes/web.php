@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VerificationController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\HomeController;
 
 
 /*
@@ -17,9 +18,7 @@ use App\Http\Controllers\Auth\LoginController;
 */
 
 // Route::get('/login', function () { return view('login');});
-Route::get('/login', [LoginController::class ,'showLoginForm']);
-
+Route::get('/home', [HomeController::class, 'indexhome'])->name('home');
+Route::get('/login', [LoginController::class ,'indexlogin']);
 Route::post('/login', [LoginController::class , 'authenticate'])->name('pushlogin');
-
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
