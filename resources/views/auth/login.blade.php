@@ -20,8 +20,12 @@
                             <i class="fas fa-lock"></i>
                         </label>
                     <input type="password" name="password" placeholder="Password" id="password" required>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                    </li>
                     <input type="submit" value="Login">
                 </form>
+
             </div>
         </body>
 </html>

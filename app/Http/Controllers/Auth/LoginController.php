@@ -3,13 +3,17 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Session;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
+
 
 class LoginController extends Controller
 {
-    public function indexlogin() {
+
+    use AuthenticatesUsers;
+        public function indexlogin() {
         return view('auth.login');
     }
     public function authenticate(Request $request)
@@ -17,7 +21,6 @@ class LoginController extends Controller
         $request->validate([
             'name' => 'required',
             'password' => 'required',
-            'datetoday' => Carbon::now()
         ]);
         $credentials = $request->only('name', 'password');
         if (Auth::attempt($credentials)) {
@@ -31,10 +34,10 @@ class LoginController extends Controller
         }
     return redirect("login")->withSuccess('You are not allowed to access');
     }
-    // public function signout(){
-    // Session::flush();
-    // Auth::logout();
-    // return Redirect('.auth.login');
-    //}
+    public function signout(){
+    Session::flush();
+    Auth::logout();
+    return Redirect('.auth.login');
+    }
 }
 ?>
