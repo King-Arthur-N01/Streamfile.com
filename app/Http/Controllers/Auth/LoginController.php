@@ -3,20 +3,20 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Session;
+
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
-
     use AuthenticatesUsers;
         public function indexlogin() {
         return view('auth.login');
     }
-    public function authenticate(Request $request)
+    public function authenticateuser(Request $request)
     {
         $request->validate([
             'name' => 'required',

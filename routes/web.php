@@ -19,9 +19,14 @@ use App\Http\Controllers\HomeController;
 
 // Route::get('/login', function () { return view('login');});
 Route::get('/home', [HomeController::class, 'indexhome'])->name('home');
+
 Route::get('/login', [LoginController::class ,'indexlogin']);
-Route::post('/login', [LoginController::class , 'authenticate'])->name('pushlogin');
-Route::get('/register', [RegisterController::class, 'validator'])->name('register');
-Route::post('/register', [RegisterController::class, 'createuser']);
+Route::post('/login', [LoginController::class , 'authenticateuser'])->name('pushlogin');
+
+Route::post('/register', [RegisterController::class, 'indexregistration'])->name('register');
+Route::get('/register', [RegisterController::class, 'authenticatecreate'])->name('pushregister');
+// Route::post('/register', [RegisterController::class, 'indexregistration']);
+
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
 // Auth::routes();
